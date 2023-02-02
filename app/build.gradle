@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.abledfuture'
+    namespace 'com.example.mentor'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.abledfuture"
+        applicationId "com.example.mentor"
         minSdk 27
         targetSdk 32
         versionCode 1
@@ -38,5 +38,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // firebase
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
 
 }

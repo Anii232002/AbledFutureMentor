@@ -1,6 +1,4 @@
-package com.example.abledfuture;
-
-import android.widget.ImageView;
+package com.example.mentor;
 
 public class UserItem {
     public String getName() {
