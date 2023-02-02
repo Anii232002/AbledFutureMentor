@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
         // to make the Navigation drawer icon always appear on the action bar
+        //hello
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         replaceFragment(new Users());
         navigationView.setNavigationItemSelectedListener(
