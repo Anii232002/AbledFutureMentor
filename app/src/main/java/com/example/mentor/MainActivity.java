@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                                 replaceFragment(new Users());
                                 break;
                             case R.id.meets:
-                                replaceFragment(new Schedule());
+                                replaceFragment(new MeetingFragment());
                                 break;
                             case R.id.profile:
                                 replaceFragment(new Profile());
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new Users());
                 break;
             case R.id.meets:
-                replaceFragment(new Schedule());
+                replaceFragment(new MeetingFragment());
                 break;
             case R.id.profile:
                 replaceFragment(new Profile());
