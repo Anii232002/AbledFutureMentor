@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     private OnItemClickListener listener;
-    private ArrayList<UserItem> data;
+    private ArrayList<infoModel> data;
 
-    public MyAdapter(ArrayList<UserItem> data) {
+    public MyAdapter(ArrayList<infoModel> data) {
         this.data = data;
     }
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -35,7 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        UserItem item = data.get(position);
+        infoModel item = data.get(position);
         holder.bind(item);
     }
 

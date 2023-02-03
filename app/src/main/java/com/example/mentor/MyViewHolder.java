@@ -15,8 +15,8 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
 
     public MyViewHolder(@NonNull View itemView, final MyAdapter.OnItemClickListener listener) {
         super(itemView);
-        name = itemView.findViewById(R.id.name);
-        des = itemView.findViewById(R.id.description);
+//        name = itemView.findViewById(R.id.name);
+//        des = itemView.findViewById(R.id.description);
         img = itemView.findViewById(R.id.profile_image);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,9 +33,9 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
 
 
 
-    public void bind(UserItem i) {
+    public void bind(infoModel i) {
         name.setText(i.getName());
-        des.setText(i.getDescription());
-        img.setImageResource(i.img);
+//        des.setText(i.getDescription());
+//        img.setImageResource(i.img);
     }
 }
