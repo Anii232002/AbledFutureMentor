@@ -3,25 +3,23 @@ package com.example.mentor;
 public class MeetModel {
 
     private String topic, description;
-    private String meetLink;
+    private String name;
     private String meetCode;
-    private String profileUrl;
 
 
-    public String getMeetLink() {
-        return meetLink;
+    public String getName() {
+        return name;
     }
 
-    public String getProfileUrl() {
-        return profileUrl;
+    public MeetModel(String topic, String description, String name, String meetCode) {
+        this.topic = topic;
+        this.description = description;
+        this.name = name;
+        this.meetCode = meetCode;
     }
 
-    public void setProfileUrl(String profileUrl) {
-        this.profileUrl = profileUrl;
-    }
-
-    public void setMeetLink(String meetLink) {
-        this.meetLink = meetLink;
+    public void setName(String meetLink) {
+        this.name = meetLink;
     }
 
     public String getMeetCode() {

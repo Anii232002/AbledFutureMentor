@@ -9,6 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.jitsi.meet.sdk.JitsiMeet;
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 public class MeetAdapter extends RecyclerView.Adapter<MeetAdapter.Holder> {
@@ -33,9 +39,32 @@ public class MeetAdapter extends RecyclerView.Adapter<MeetAdapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
 
-
         holder.topic.setText(list.get(position).getTopic());
         holder.description.setText(list.get(position).getDescription());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                URL server;
+                try{
+                    server =new URL("https://meet.jit.si");
+                    JitsiMeetConferenceOptions defaultOptions=
+                            new JitsiMeetConferenceOptions.Builder()
+                                    .setServerURL(server)
+                                    .setFeatureFlag("welcomepage.enabled", false).build();
+                    JitsiMeet.setDefaultConferenceOptions(defaultOptions);
+
+                }catch (MalformedURLException e){
+                    e.printStackTrace();
+                }
+                        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+                                .setRoom("xyzki8edk")
+                                .setFeatureFlag("welcomepage.enabled", false).build();
+                        JitsiMeetActivity.launch(context,options);
+
+            }
+        });
 
     }
 

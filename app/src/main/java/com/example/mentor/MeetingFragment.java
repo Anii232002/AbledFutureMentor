@@ -51,12 +51,14 @@ public class MeetingFragment extends Fragment {
         binding.recyclerViewMeeting.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.recyclerViewMeeting.setAdapter(adapter);
 
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("meetings");
+        /*DatabaseReference ref = FirebaseDatabase.getInstance().getReference("meetings");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot s: snapshot.getChildren()){
-                    list.add(new MeetModel(s.getValue()))
+                    MeetModel infoModel = s.getValue(MeetModel.class);
+                    list.add(infoModel);
+                    adapter.notifyDataSetChanged();
                 }
             }
 
@@ -64,7 +66,7 @@ public class MeetingFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        })
+        })*/
 
         binding.scheduleMeetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
