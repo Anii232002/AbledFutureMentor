@@ -11,9 +11,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_marginTop="30dp"
-        android:layout_width="60dp"
+        android:layout_width="100dp"
         android:layout_marginLeft="160dp"
-        android:layout_height="60dp"
+        android:layout_height="100dp"
         android:src="@drawable/ic_baseline_person_24"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
@@ -21,19 +21,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="140dp"
-        android:fontFamily="@font/poppins_black_italic"
-        android:text="Ravi Rampaul"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
-        app:layout_goneMarginTop="10dp"
-        android:layout_marginBottom="20dp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="140dp"-->
+<!--        android:fontFamily="@font/poppins_black_italic"-->
+<!--        android:text="Ravi Rampaul"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/profile_image"-->
+<!--        app:layout_goneMarginTop="10dp"-->
+<!--        android:layout_marginBottom="20dp"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,6 +42,7 @@
      android:background="@drawable/rectangle"
         android:layout_margin="10dp"
         android:orientation="vertical"
+        android:padding="10dp"
         android:layout_marginBottom="380dp"
    >
 
@@ -54,7 +55,7 @@
            >
            <TextView
 
-               android:layout_width="wrap_content"
+               android:layout_width="80dp"
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:fontFamily="@font/poppins_black_italic"
@@ -64,13 +65,12 @@
                app:layout_constraintTop_toBottomOf="@+id/profile_image"
                app:layout_goneMarginTop="10dp" />
            <TextView
-
+                android:id="@+id/abled_name"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:fontFamily="@font/poppins_light"
                android:text="Anirudddh Singh"
-               android:layout_marginLeft="50dp"
 
                app:layout_goneMarginTop="10dp" />
 
@@ -85,7 +85,7 @@
             >
             <TextView
 
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_black_italic"
@@ -95,13 +95,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
             <TextView
-
+                android:id="@+id/abled_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="Anirudddh Singh"
-                android:layout_marginLeft="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
@@ -115,7 +114,7 @@
             android:layout_margin="10dp"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_black_italic"
@@ -125,13 +124,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
             <TextView
-
+                android:id="@+id/abled_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="Male"
-                android:layout_marginLeft="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
@@ -139,9 +137,40 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/rectangle"
+            >
+            <TextView
+
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_black_italic"
+                android:text="Email :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                app:layout_goneMarginTop="10dp" />
+            <TextView
+                android:id="@+id/abled_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Anirudddh Singh"
+
+                app:layout_goneMarginTop="10dp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -157,34 +186,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="10dp"
-            android:background="@drawable/rectangle"
-            >
+            android:background="@drawable/rectangle">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="3dp"
-                android:src="@drawable/ic_baseline_location_on_24"/>
             <TextView
 
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_black_italic"
-                android:text="Address :"
+                android:text="Location :"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
             <TextView
-
+                android:id="@+id/abled_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="Anirudddh Singh"
-                android:layout_marginLeft="50dp"
 
                 app:layout_goneMarginTop="10dp" />
 
@@ -197,15 +218,9 @@
             android:layout_margin="10dp"
 
             >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="3dp"
-                android:src="@drawable/skills"/>
             <TextView
 
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_black_italic"
@@ -215,56 +230,51 @@
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
             <TextView
-
+                android:id="@+id/abled_skills"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="Anirudddh Singh"
-                android:layout_marginLeft="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="10dp"
             >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="3dp"
-                android:src="@drawable/ic_baseline_star_24"/>
             <TextView
 
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_black_italic"
-                android:text="Interests :"
+                android:text="Studied:"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
             <TextView
-
+                android:id="@+id/abled_qualification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Male"
-                android:layout_marginLeft="50dp"
+                android:text="Anirudddh Singh"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_image"
                 app:layout_goneMarginTop="10dp" />
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 </LinearLayout>
